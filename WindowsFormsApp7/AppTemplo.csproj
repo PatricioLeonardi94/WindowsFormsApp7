@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props" Condition="Exists('..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A534CA84-1F2F-4A3D-A23A-C9EA07A4D725}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp7</RootNamespace>
+    <AssemblyName>WindowsFormsApp7</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\FO004\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6D5D8A582A4A42BAAA807C06207750BC68B84302</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WindowsFormsApp7_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer, Version=2.5.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.5.1\lib\netstandard2.0\Humanizer.dll</HintPath>
+    </Reference>
+    <Reference Include="ImpromptuInterface, Version=5.6.7.12678, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImpromptuInterface.5.6.7\lib\net40\ImpromptuInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.7.3\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.7.3\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.7.3\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf, Version=3.33.12.461, Culture=neutral, PublicKeyToken=60fd6cf9b15941cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfium.Net.SDK.3.34.2704\lib\net461\Patagames.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf.WinForms, Version=3.15.12.461, Culture=neutral, PublicKeyToken=60fd6cf9b15941cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfium.Net.SDK.3.34.2704\lib\net461\Patagames.Pdf.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf.Wpf, Version=3.16.13.461, Culture=neutral, PublicKeyToken=60fd6cf9b15941cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfium.Net.SDK.3.34.2704\lib\net461\Patagames.Pdf.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Common, Version=2.2.12.61046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.XLS.9.2.1\lib\net46\Spire.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.XLS.9.2.1\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.2.8.19046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.XLS.9.2.1\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=9.2.12.61046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.XLS.9.2.1\lib\net46\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.9.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.4.9\lib\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.16.3.0.21\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.16.3.0.21\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=16.3460.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.XlsIO.Wpf.16.3.0.21\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agegar_Clase_Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agegar_Clase_Profesor.Designer.cs">
+      <DependentUpon>Agegar_Clase_Profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\AlumnoMin.cs" />
+    <Compile Include="Clases\DayMinClase.cs" />
+    <Compile Include="Clases\Comprobante Especial.cs" />
+    <Compile Include="InterfazProfesores\EditarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazProfesores\EditarProfesor.Designer.cs">
+      <DependentUpon>EditarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz Reimpresion\Confirmar_Cancelar_Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Reimpresion\Confirmar_Cancelar_Comprobante.Designer.cs">
+      <DependentUpon>Confirmar_Cancelar_Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Comprobante Particular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Comprobante Particular.Designer.cs">
+      <DependentUpon>Comprobante Particular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Horario_Curso_Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Horario_Curso_Select.Designer.cs">
+      <DependentUpon>Horario_Curso_Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nota de Credito\Contraseña_Nota_De_Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota de Credito\Contraseña_Nota_De_Credito.Designer.cs">
+      <DependentUpon>Contraseña_Nota_De_Credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazAlumnos\Editar Nombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazAlumnos\Editar Nombre.Designer.cs">
+      <DependentUpon>Editar Nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz Reimpresion\Comprobante_Para_Reimpresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Reimpresion\Comprobante_Para_Reimpresion.Designer.cs">
+      <DependentUpon>Comprobante_Para_Reimpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz Reimpresion\Interfaz Re-Impresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Reimpresion\Interfaz Re-Impresion.Designer.cs">
+      <DependentUpon>Interfaz Re-Impresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\ListaExcelProfesor.cs" />
+    <Compile Include="Interfaz Listas\Imprimir Listas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Listas\Imprimir Listas.Designer.cs">
+      <DependentUpon>Imprimir Listas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Horarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Horarios.Designer.cs">
+      <DependentUpon>Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Diferencia_Recibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Diferencia_Recibos.Designer.cs">
+      <DependentUpon>Diferencia_Recibos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\ImprimirTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\ImprimirTicket.Designer.cs">
+      <DependentUpon>ImprimirTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\DestinoComprobantesServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\DestinoComprobantesServer.Designer.cs">
+      <DependentUpon>DestinoComprobantesServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Cursos.Designer.cs">
+      <DependentUpon>Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\DestinoComprobantes - Copia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\DestinoComprobantes - Copia.Designer.cs">
+      <DependentUpon>DestinoComprobantes - Copia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazUsuarios\Usuario CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazUsuarios\Usuario CambiarContraseña.Designer.cs">
+      <DependentUpon>Usuario CambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Cierres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\Cierres.Designer.cs">
+      <DependentUpon>Cierres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazLibros\AgregarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazLibros\AgregarLibro.Designer.cs">
+      <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Clase.cs" />
+    <Compile Include="Clases\ClaseExcel.cs" />
+    <Compile Include="Clases\ComprobanteAlumno.cs" />
+    <Compile Include="Clases\ComprobanteParcial.cs" />
+    <Compile Include="Clases\CreaTicket.cs" />
+    <Compile Include="Clases\Curso.cs" />
+    <Compile Include="Clases\DatoExcel.cs" />
+    <Compile Include="Clases\Global.cs" />
+    <Compile Include="InterfazComprobantes\InterfazRecibosAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\InterfazRecibosAlumnos.Designer.cs">
+      <DependentUpon>InterfazRecibosAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazAlumnos\AñadirPersonaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazAlumnos\AñadirPersonaBase.Designer.cs">
+      <DependentUpon>AñadirPersonaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazUsuarios\CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazUsuarios\CambiarContraseña.Designer.cs">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\CirreDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\CirreDiario.Designer.cs">
+      <DependentUpon>CirreDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Alumno.cs" />
+    <Compile Include="InterfazAlumnos\Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazAlumnos\Alumnos.Designer.cs">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazLibros\Deposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazLibros\Deposito.Designer.cs">
+      <DependentUpon>Deposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazAlumnos\ComprobantesAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazAlumnos\ComprobantesAlumnos.Designer.cs">
+      <DependentUpon>ComprobantesAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazAlumnos\Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazAlumnos\Comprobante.Designer.cs">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazUsuarios\NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazUsuarios\NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazLibros\RetiroDeLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazLibros\RetiroDeLibro.Designer.cs">
+      <DependentUpon>RetiroDeLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mains\Main Listas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mains\Main Listas.Designer.cs">
+      <DependentUpon>Main Listas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mains\MainDestinoComprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mains\MainDestinoComprobantes.Designer.cs">
+      <DependentUpon>MainDestinoComprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mains\Main ClasesYCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mains\Main ClasesYCursos.Designer.cs">
+      <DependentUpon>Main ClasesYCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mains\Main Libro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mains\Main Libro.Designer.cs">
+      <DependentUpon>Main Libro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mains\Main Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mains\Main Usuarios.Designer.cs">
+      <DependentUpon>Main Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mains\Main Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mains\Main Alumno.Designer.cs">
+      <DependentUpon>Main Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mains\Main Comprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mains\Main Comprobantes.Designer.cs">
+      <DependentUpon>Main Comprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\CancelarComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\CancelarComprobante.Designer.cs">
+      <DependentUpon>CancelarComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\MinComprobante.cs" />
+    <Compile Include="Nota de Credito\Nota_De_Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota de Credito\Nota_De_Credito.Designer.cs">
+      <DependentUpon>Nota_De_Credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazProfesores\Profesores y cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazProfesores\Profesores y cursos.Designer.cs">
+      <DependentUpon>Profesores y cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Profesor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clases\UserData.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="InterfazUsuarios\UsuarioyContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazUsuarios\UsuarioyContraseña.Designer.cs">
+      <DependentUpon>UsuarioyContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazComprobantes\VerCierres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazComprobantes\VerCierres.Designer.cs">
+      <DependentUpon>VerCierres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazUsuarios\Usuario Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazUsuarios\Usuario Delete.Designer.cs">
+      <DependentUpon>Usuario Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz Listas\Ver_Listas_Clases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz Listas\Ver_Listas_Clases.Designer.cs">
+      <DependentUpon>Ver_Listas_Clases.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Agegar_Clase_Profesor.resx">
+      <DependentUpon>Agegar_Clase_Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazProfesores\EditarProfesor.resx">
+      <DependentUpon>EditarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Reimpresion\Confirmar_Cancelar_Comprobante.resx">
+      <DependentUpon>Confirmar_Cancelar_Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\Comprobante Particular.resx">
+      <DependentUpon>Comprobante Particular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\Horario_Curso_Select.resx">
+      <DependentUpon>Horario_Curso_Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota de Credito\Contraseña_Nota_De_Credito.resx">
+      <DependentUpon>Contraseña_Nota_De_Credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazAlumnos\Editar Nombre.resx">
+      <DependentUpon>Editar Nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Reimpresion\Comprobante_Para_Reimpresion.resx">
+      <DependentUpon>Comprobante_Para_Reimpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Reimpresion\Interfaz Re-Impresion.resx">
+      <DependentUpon>Interfaz Re-Impresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Listas\Imprimir Listas.resx">
+      <DependentUpon>Imprimir Listas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\Horarios.resx">
+      <DependentUpon>Horarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\Diferencia_Recibos.resx">
+      <DependentUpon>Diferencia_Recibos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\ImprimirTicket.resx">
+      <DependentUpon>ImprimirTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\DestinoComprobantesServer.resx">
+      <DependentUpon>DestinoComprobantesServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\Cursos.resx">
+      <DependentUpon>Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\Cierres.resx">
+      <DependentUpon>Cierres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\DestinoComprobantes - Copia.resx">
+      <DependentUpon>DestinoComprobantes - Copia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazLibros\AgregarLibro.resx">
+      <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazAlumnos\Alumnos.resx">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\InterfazRecibosAlumnos.resx">
+      <DependentUpon>InterfazRecibosAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazAlumnos\AñadirPersonaBase.resx">
+      <DependentUpon>AñadirPersonaBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazUsuarios\CambiarContraseña.resx">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\CirreDiario.resx">
+      <DependentUpon>CirreDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazAlumnos\Comprobante.resx">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazAlumnos\ComprobantesAlumnos.resx">
+      <DependentUpon>ComprobantesAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazLibros\Deposito.resx">
+      <DependentUpon>Deposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazUsuarios\NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazLibros\RetiroDeLibro.resx">
+      <DependentUpon>RetiroDeLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mains\Main Listas.resx">
+      <DependentUpon>Main Listas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mains\MainDestinoComprobantes.resx">
+      <DependentUpon>MainDestinoComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mains\Main ClasesYCursos.resx">
+      <DependentUpon>Main ClasesYCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mains\Main Libro.resx">
+      <DependentUpon>Main Libro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mains\Main Usuarios.resx">
+      <DependentUpon>Main Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mains\Main Alumno.resx">
+      <DependentUpon>Main Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mains\Main Comprobantes.resx">
+      <DependentUpon>Main Comprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\CancelarComprobante.resx">
+      <DependentUpon>CancelarComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota de Credito\Nota_De_Credito.resx">
+      <DependentUpon>Nota_De_Credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pdf.Net.SDK.licx" />
+    <EmbeddedResource Include="InterfazProfesores\Profesores y cursos.resx">
+      <DependentUpon>Profesores y cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="InterfazUsuarios\UsuarioyContraseña.resx">
+      <DependentUpon>UsuarioyContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazComprobantes\VerCierres.resx">
+      <DependentUpon>VerCierres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazUsuarios\Usuario CambiarContraseña.resx">
+      <DependentUpon>Usuario CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazUsuarios\Usuario Delete.resx">
+      <DependentUpon>Usuario Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz Listas\Ver_Listas_Clases.resx">
+      <DependentUpon>Ver_Listas_Clases.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="pdfiumviewer.native.x86_64.v8-xfa.2018.4.8.256.nupkg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WindowsFormsApp7_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icudt.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\e998bfe6a0b9e5bbb7e4bd9be58589e5b1b1e6ada3e99680.jpg" />
+    <None Include="Resources\bekir-donmez-335320-unsplash.jpg" />
+    <None Include="Resources\38729489_1778374302230731_958707691981635584_n.jpg" />
+    <None Include="Resources\Libros.jpg" />
+    <None Include="Resources\ckturistando-630631-unsplash.jpg" />
+    <None Include="Resources\Salon de Té-FoGuangShanArgentina.jpg" />
+    <None Include="Resources\the-iconic-big-golden.jpg" />
+    <Content Include="x64\pdfium.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\pdfium.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InterfazClasesyCursos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props'))" />
+  </Target>
+</Project>
